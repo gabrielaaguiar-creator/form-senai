@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enriquecimento de Dados - SENAI</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Fonte e base da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2A09F0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: ghostwhite;
+            border-radius: 10px;
+            width: 400px;
+            padding: 25px 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #154672;
+            margin-bottom: 15px;
+        }
+
+        h3, h4 {
+            color: #154672;
+            margin-top: 15px;
+            padding-left: 6px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #464751;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid rgb(185,185,185);
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+            height: 60px;
+        }
+
+        .radio-group {
+            margin-top: 8px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+        .grupo-botoes {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .grupo-botoes button, 
+        .grupo-botoes a {
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            border: none;
+        }
+
+        .btn-gravar {
+            background-color: #007700;
+        }
+
+        .btn-cancelar {
+            background-color: #cc0000;
+        }
+
+        .btn-voltar {
+            background-color: #888;
+        }
+
+        .btn-gravar:hover {
+            background-color: #009900;
+        }
+
+        .btn-cancelar:hover {
+            background-color: #e60000;
+        }
+
+        .btn-voltar:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <h2>Enriquecimento de Dados</h2>
+
+        <form action="#" method="POST">
+            <h3>Dados Pessoais</h3>
+
+            <label for="nome_completo">Nome completo:</label>
+            <input type="text" id="nome_completo" name="nome_completo" required>
+
+            <label for="data_nasc">Data de Nascimento:</label>
+            <input type="date" id="data_nasc" name="data_nasc" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Selecione</option>
+                <option value="fem">Feminino</option>
+                <option value="masc">Masculino</option>
+            </select>
+
+            <label for="nacionalidade">Nacionalidade:</label>
+            <input type="text" id="nacionalidade" name="nacionalidade" value="Brasileira">
+
+            <h3>Endereço e Contato</h3>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade">
+
+            <label for="tel_celular">Telefone Celular:</label>
+            <input type="tel" id="tel_celular" name="tel_celular">
+
+            <label for="linkedin">LinkedIn (URL):</label>
+            <input type="url" id="linkedin" name="linkedin">
+
+            <h4>Outras Informações</h4>
+
+            <label>Possui CNH?</label>
+            <div class="radio-group">
+                <input type="radio" id="cnh_sim" name="cnh" value="sim">
+                <label for="cnh_sim">Sim</label>
+                <input type="radio" id="cnh_nao" name="cnh" value="nao">
+                <label for="cnh_nao">Não</label>
+            </div>
+
+            <label for="observacao_extra">Observação:</label>
+            <textarea id="observacao_extra" name="observacao_extra"></textarea>
+
+            <div class="grupo-botoes">
+                <button type="submit" class="btn-gravar">Gravar</button>
+                <button type="reset" class="btn-cancelar">Limpar</button>
+                <a href="index.html" class="btn-voltar">Voltar</a>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
